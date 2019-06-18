@@ -39,8 +39,8 @@ urlpatterns = [
     url(r'^api/token/get/$', jwt_views.obtain_jwt_token, 
     name='get_token'),
     url(r'^api/token/refresh/$', jwt_views.refresh_jwt_token, 
-    name='get_token'),
+    name='refresh_token'),
     url(r'^api/token/verify/$', jwt_views.verify_jwt_token, 
-    name='get_token'),
+    name='verify_token'),
     path('', auth_views.home, name='home')
 ] + static(settings.STATIC_ROOT, document_root=settings.STATIC_ROOT)
