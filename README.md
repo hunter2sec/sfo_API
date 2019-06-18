@@ -1,8 +1,11 @@
 # API for Sword Fighter Online
 ## A made up online game
 Created with JWT-enabled Django Rest Framework.
+### Items
+Items are in-game items that can be bought or sold.
 
 ## Usage Examples:
+Check `/api/` for a list of resources.
 
 ### regular token
 curl -X POST -H "Content-Type: application/json" -d '{"username":"user1","password":"coolpass"}' http://localhost:8000/api/token/get/
