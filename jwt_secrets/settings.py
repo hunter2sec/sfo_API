@@ -1,3 +1,4 @@
+import secrets
 """
 Django settings for jwt_secrets project.
 
@@ -20,7 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'arptv&4u@tl#x0+5p8tp$vjsb%@vwhc$qwq7todoepnom^(9tl'
+
+SECRET_KEY = secrets.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
