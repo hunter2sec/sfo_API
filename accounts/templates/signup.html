@@ -1,0 +1,9 @@
+{% block content %}
+<h1>Register an account for API access</h1>
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign up</button>
+  </form>
+{% endblock %}

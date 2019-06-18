@@ -1,0 +1,17 @@
+<h1>Sword Fighter Online</h1>
+<h3>Trade API</h3>
+
+{% if user.is_authenticated %}
+
+<h2>Welcome {{ user.username }}</h2>
+<p>Get an API token from <a href="{% url 'get_token' %}">/api/token/get</a> by either sending a POST request with your user credentials or by using the form.</p>
+
+<p>To view all Items send a GET request to /api/items with your authentication token or by using the form.</p>
+
+<a href="{% url 'logout' %}">logout</a>
+
+{% else %}
+
+<h2>Welcome, guest! </h2>
+    <p>To access API documentation and receive an authentication token, please <a href="{% url 'login' %}">log in</a> or <a href="{% url 'signup' %}">sign up</a></p>
+{% endif %}
